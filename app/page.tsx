@@ -86,7 +86,7 @@ export default function Home() {
             fall 2024 set
           </div>
           <div style={{opacity: opacityVars[2]}} className="text-black flex justify-center items-center pl-5 pr-5">
-            past performances
+            dance covers
           </div>
           <div style={{opacity: opacityVars[3]}} className="text-black flex justify-center items-center pl-5 pr-5">
             meet exec
@@ -95,7 +95,7 @@ export default function Home() {
             merch
           </div>
           <div style={{opacity: opacityVars[5]}} className="text-black flex justify-center items-center pl-5 pr-5">
-            contact us
+            join us
           </div>
         </div>
       </div>
