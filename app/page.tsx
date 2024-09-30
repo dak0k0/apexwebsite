@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect} from 'react';
 
 const thresholds = [0, 0.15, 0.3, 0.45, 0.6, 0.75];
@@ -28,8 +29,6 @@ export default function Home() {
     const handleScroll = () => {
       const scrollPositionPercentage = window.scrollY / window.innerHeight
       
-      
-
       const initialDims = window.innerWidth / 5
       const finalDims = 0.05 * window.innerWidth
 
@@ -49,7 +48,6 @@ export default function Home() {
       updateOpacities(scrollPositionPercentage)
       
     };
-
 
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -79,24 +77,36 @@ export default function Home() {
       </div>
       <div className="fixed top-0 left-[7vw] w-[50vw] h-[5vw]">
         <div className="flex flex-row w-full h-full">
-          <div style={{opacity: opacityVars[0]}} className="text-black flex justify-center items-center pl-5 pr-5">
-            about us
-          </div>
-          <div style={{opacity: opacityVars[1]}} className="text-black flex justify-center items-center pl-5 pr-5">
-            fall 2024 set
-          </div>
-          <div style={{opacity: opacityVars[2]}} className="text-black flex justify-center items-center pl-5 pr-5">
-            dance covers
-          </div>
-          <div style={{opacity: opacityVars[3]}} className="text-black flex justify-center items-center pl-5 pr-5">
-            meet exec
-          </div>
-          <div style={{opacity: opacityVars[4]}} className="text-black flex justify-center items-center pl-5 pr-5">
-            merch
-          </div>
-          <div style={{opacity: opacityVars[5]}} className="text-black flex justify-center items-center pl-5 pr-5">
-            join us
-          </div>
+          <Link href="/about-us">
+              <div style={{opacity: opacityVars[0]}} className="h-full text-black hover:bg-black hover:text-white transition-colors duration-300 ease-in-out flex justify-center items-center pl-5 pr-5">
+                about us
+              </div>
+          </Link>
+          <Link href="/current-set">
+            <div style={{opacity: opacityVars[1]}} className="h-full text-black hover:bg-black hover:text-white transition-colors duration-300 ease-in-out flex justify-center items-center pl-5 pr-5">
+              fall 2024 set
+            </div>
+          </Link>
+          <Link href="/past-covers">
+            <div style={{opacity: opacityVars[2]}} className="h-full text-black hover:bg-black hover:text-white transition-colors duration-300 ease-in-out flex justify-center items-center pl-5 pr-5">
+              dance covers
+            </div>
+          </Link>
+          <Link href="/meet-exec">
+            <div style={{opacity: opacityVars[3]}} className="h-full text-black hover:bg-black hover:text-white transition-colors duration-300 ease-in-out flex justify-center items-center pl-5 pr-5">
+              meet exec
+            </div>
+          </Link>
+          <Link href="/merch">
+            <div style={{opacity: opacityVars[4]}} className="h-full text-black hover:bg-black hover:text-white transition-colors duration-300 ease-in-out flex justify-center items-center pl-5 pr-5">
+              merch
+            </div>
+          </Link>
+          <Link href="/join-us">
+            <div style={{opacity: opacityVars[5]}} className="h-full text-black hover:bg-black hover:text-white transition-colors duration-300 ease-in-out flex justify-center items-center pl-5 pr-5">
+              join us
+            </div>
+          </Link>
         </div>
       </div>
     </main>
